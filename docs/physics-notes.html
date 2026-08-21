@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ballistic Formulation Notes & Derivations</title>
+  <link rel="stylesheet" href="../css/layout.css" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+  <style>
+    body { font-family: var(--font-ui); background: var(--bg-secondary); color: var(--text-primary); padding: 24px; max-width: 900px; margin: 0 auto; overflow-y: auto; }
+    h1, h2, h3 { color: var(--text-primary); margin-top: 20px; }
+    .card { background: var(--bg-primary); border: 0.5px solid var(--border); padding: 16px 20px; border-radius: 6px; margin-bottom: 20px; }
+    .math-block { background: var(--bg-secondary); padding: 12px; border-left: 3px solid var(--purple); font-family: var(--font-mono); margin: 10px 0; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Fire Control System — Ballistic Physics & Derivations</h1>
+  <p style="color:var(--text-secondary);font-size:13px;">Proof-of-Concept Technical Reference Notes | Author: Akshat Dimri</p>
+
+  <div class="card">
+    <h2>1. Elevation Angle Formulation (\(\alpha_\sigma\))</h2>
+    <p>The total elevation angle \(\alpha_\sigma\) in arcminutes incorporates the non-linear base drop curve \(\alpha_0(D_y)\), environmental perturbation scaling factor \(S_{fp,a}\), sight elevation cant \(\gamma\), barrel pitch angular rate \(\omega_{BH}\), crosswind drift term, and boresight azimuth coupling:</p>
+    <div id="eq-alpha" class="math-block"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Azimuth Deflection Formulation (\(\beta_\sigma\))</h2>
+    <p>The total azimuth correction angle \(\beta_\sigma\) accounts for sight tilt elevation cross-product, turret traverse motion rate \(\omega_{TH}\), crosswind factor \(K_W\), and empirical low-range calibration bias \(\lambda_b\):</p>
+    <div id="eq-beta" class="math-block"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. 2-Pass Range Iteration (\(D_y\)) & Environmental Scaling (\(S_{fp}\))</h2>
+    <div id="eq-sfp" class="math-block"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.katex) {
+        katex.render("\\alpha_\\sigma = a_{\\text{corr}} \\cos\\gamma + \\left[-\\omega_{BH} - \\frac{V_T \\cos q (\\phi - a_0/60)}{D_y}\\right] t_{\\text{corr}} \\cdot 60 + W_z K_W \\gamma t_{\\text{corr}} \\cdot 60 + \\frac{\\phi V_T \\cos q}{V} \\cdot 60", document.getElementById('eq-alpha'));
+        katex.render("\\beta_\\sigma = a_{\\text{corr}} \\sin\\gamma + ot_{\\text{sign}} \\cdot \\omega_{TH} t_{\\text{corr}} \\cdot 60 + kw_{\\text{scale}} \\cdot W_z K_W t_{\\text{corr}} \\left(\\frac{10800}{\\pi}\\right) + \\lambda_b \\cos\\gamma", document.getElementById('eq-beta'));
+        katex.render("S_{fp, a} = K_{T3} dT_3 + K_{TB} \\times 10^{-4} dTB \\cdot D_y + K_H \\times 10^{-4} dH \\cdot D_y + K_{V0} dV_0 + K_{Dd, a} dd", document.getElementById('eq-sfp'));
+      }
+    });
+  </script>
+</body>
+</html>
