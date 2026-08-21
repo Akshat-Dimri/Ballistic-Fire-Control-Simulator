@@ -2,6 +2,8 @@
 
 An interactive, high-precision web dashboard for simulating non-linear fire control ballistic solutions, non-linear projectile drop curves (PySR fits), environmental factors, and degrees-of-calculation formulation modes.
 
+Live Project Link `https://ballistic-fire-control-simulator.onrender.com`
+
 ## Quick Start
 
 Run any standard local HTTP static server inside this directory:
