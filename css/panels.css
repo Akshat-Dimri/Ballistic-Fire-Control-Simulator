@@ -1,258 +1,258 @@
-/* panel layout */
-/* input field */
+/* just some layout stuff */
+/* tweaking styles */
 .panel-controls {
-  --content-scale: 1;
-  border-right: 0.5px solid var(--border);
-  background: var(--bg-secondary);
-  padding: calc(14px * var(--content-scale)) calc(12px * var(--content-scale));
-  display: flex;
-  flex-direction: column;
-  gap: calc(12px * var(--content-scale));
-  overflow-y: auto;
+ --content-scale: 1;
+ border-right: 0.5px solid var(--border);
+ background: var(--bg-secondary);
+ padding: calc(14px * var(--content-scale)) calc(12px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(12px * var(--content-scale));
+ overflow-y: auto;
 }
 
 .control-section {
-  display: flex;
-  flex-direction: column;
-  gap: calc(8px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(8px * var(--content-scale));
 }
 
 .divider {
-  height: 0.5px;
-  background: var(--border);
-  flex-shrink: 0;
-  margin: calc(4px * var(--content-scale)) 0;
+ height: 0.5px;
+ background: var(--border);
+ flex-shrink: 0;
+ margin: calc(4px * var(--content-scale)) 0;
 }
 
 .section-label {
-  font-size: calc(10px * var(--content-scale));
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  margin-bottom: calc(2px * var(--content-scale));
+ font-size: calc(10px * var(--content-scale));
+ font-weight: 700;
+ letter-spacing: 0.07em;
+ text-transform: uppercase;
+ color: var(--text-tertiary);
+ margin-bottom: calc(2px * var(--content-scale));
 }
 
 .param-row {
-  display: flex;
-  flex-direction: column;
-  gap: calc(3px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(3px * var(--content-scale));
 }
 
 .param-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .param-label {
-  font-size: calc(11px * var(--content-scale));
-  color: var(--text-secondary);
+ font-size: calc(11px * var(--content-scale));
+ color: var(--text-secondary);
 }
 
 .param-value {
-  font-size: calc(11px * var(--content-scale));
-  color: var(--text-tertiary);
-  font-variant-numeric: tabular-nums;
-  font-weight: 500;
+ font-size: calc(11px * var(--content-scale));
+ color: var(--text-tertiary);
+ font-variant-numeric: tabular-nums;
+ font-weight: 500;
 }
 
-/* visual field */
+/* tweaking styles */
 .panel-center {
-  display: flex;
-  flex-direction: column;
-  background: var(--bg-canvas);
-  overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ background: var(--bg-canvas);
+ overflow: hidden;
 }
 
 .visualizer-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  flex: 1;
-  min-height: 0;
-  border-bottom: 0.5px solid var(--border);
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
+ flex: 1;
+ min-height: 0;
+ border-bottom: 0.5px solid var(--border);
 }
 
 .canvas-cell {
-  display: flex;
-  flex-direction: column;
-  border-right: 0.5px solid var(--border);
-  min-height: 0;
-  position: relative;
-  background: var(--bg-primary);
+ display: flex;
+ flex-direction: column;
+ border-right: 0.5px solid var(--border);
+ min-height: 0;
+ position: relative;
+ background: var(--bg-primary);
 }
 .canvas-cell:last-child { border-right: none; }
 
 .cell-header {
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  border-bottom: 0.5px solid var(--border);
-  background: var(--bg-secondary);
-  flex-shrink: 0;
+ height: 32px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 10px;
+ border-bottom: 0.5px solid var(--border);
+ background: var(--bg-secondary);
+ flex-shrink: 0;
 }
 
 .cell-title {
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
+ font-size: 10.5px;
+ font-weight: 600;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
+ color: var(--text-tertiary);
 }
 
 .canvas-wrap {
-  flex: 1;
-  min-height: 0;
-  position: relative;
-  width: 100%;
-  height: 100%;
+ flex: 1;
+ min-height: 0;
+ position: relative;
+ width: 100%;
+ height: 100%;
 }
 
 .sim-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+ position: absolute;
+ inset: 0;
+ width: 100%;
+ height: 100%;
+ display: block;
 }
 
-/* live equation */
+/* just some layout stuff */
 .formula-display-bar {
-  flex-shrink: 0;
-  background: var(--bg-primary);
-  border-top: 0.5px solid var(--border);
-  padding: 10px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+ flex-shrink: 0;
+ background: var(--bg-primary);
+ border-top: 0.5px solid var(--border);
+ padding: 10px 14px;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
 }
 
 .formula-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .formula-box {
-  background: var(--bg-secondary);
-  border-left: 3px solid var(--purple);
-  padding: 8px 12px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-primary);
-  overflow-x: auto;
-  white-space: nowrap;
-  border: 0.5px solid var(--border);
-  border-left: 3px solid var(--purple);
+ background: var(--bg-secondary);
+ border-left: 3px solid var(--purple);
+ padding: 8px 12px;
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--text-primary);
+ overflow-x: auto;
+ white-space: nowrap;
+ border: 0.5px solid var(--border);
+ border-left: 3px solid var(--purple);
 }
 .formula-box .katex-display {
-  margin: 0;
-  text-align: left;
+ margin: 0;
+ text-align: left;
 }
 
-/* output detail */
+/* tweaking styles */
 .panel-info {
-  --content-scale: 1;
-  border-left: 0.5px solid var(--border);
-  background: var(--bg-primary);
-  padding: calc(12px * var(--content-scale));
-  display: flex;
-  flex-direction: column;
-  gap: calc(10px * var(--content-scale));
-  overflow-y: auto;
+ --content-scale: 1;
+ border-left: 0.5px solid var(--border);
+ background: var(--bg-primary);
+ padding: calc(12px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(10px * var(--content-scale));
+ overflow-y: auto;
 }
 
 .term-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: calc(8px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(8px * var(--content-scale));
 }
 
 .term-card {
-  border: 0.5px solid var(--border);
-  background: var(--bg-secondary);
-  border-radius: calc(4px * var(--content-scale));
-  overflow: hidden;
+ border: 0.5px solid var(--border);
+ background: var(--bg-secondary);
+ border-radius: calc(4px * var(--content-scale));
+ overflow: hidden;
 }
 
 .term-card-header {
-  padding: calc(8px * var(--content-scale)) calc(10px * var(--content-scale));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  background: var(--bg-primary);
-  user-select: none;
+ padding: calc(8px * var(--content-scale)) calc(10px * var(--content-scale));
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ cursor: pointer;
+ background: var(--bg-primary);
+ user-select: none;
 }
 
 .term-card-title {
-  font-size: calc(11.5px * var(--content-scale));
-  font-weight: 600;
-  color: var(--text-primary);
+ font-size: calc(11.5px * var(--content-scale));
+ font-weight: 600;
+ color: var(--text-primary);
 }
 
 .term-card-body {
-  padding: calc(10px * var(--content-scale));
-  display: flex;
-  flex-direction: column;
-  gap: calc(8px * var(--content-scale));
-  border-top: 0.5px solid var(--border);
-  font-size: calc(11px * var(--content-scale));
-  line-height: 1.5;
-  color: var(--text-secondary);
+ padding: calc(10px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(8px * var(--content-scale));
+ border-top: 0.5px solid var(--border);
+ font-size: calc(11px * var(--content-scale));
+ line-height: 1.5;
+ color: var(--text-secondary);
 }
 
 .term-math {
-  font-family: var(--font-mono);
-  font-size: calc(10.5px * var(--content-scale));
-  background: var(--bg-canvas);
-  padding: calc(4px * var(--content-scale)) calc(8px * var(--content-scale));
-  border-radius: calc(2px * var(--content-scale));
-  color: var(--purple);
-  overflow-x: auto;
+ font-family: var(--font-mono);
+ font-size: calc(10.5px * var(--content-scale));
+ background: var(--bg-canvas);
+ padding: calc(4px * var(--content-scale)) calc(8px * var(--content-scale));
+ border-radius: calc(2px * var(--content-scale));
+ color: var(--purple);
+ overflow-x: auto;
 }
 .term-math .katex-display {
-  margin: 0;
-  text-align: left;
+ margin: 0;
+ text-align: left;
 }
 
-/* solution brief */
+/* css is weird sometimes */
 .output-brief-box {
-  background: var(--teal-light);
-  border: 0.5px solid var(--teal);
-  padding: calc(10px * var(--content-scale)) calc(12px * var(--content-scale));
-  border-radius: calc(4px * var(--content-scale));
-  display: flex;
-  flex-direction: column;
-  gap: calc(6px * var(--content-scale));
+ background: var(--teal-light);
+ border: 0.5px solid var(--teal);
+ padding: calc(10px * var(--content-scale)) calc(12px * var(--content-scale));
+ border-radius: calc(4px * var(--content-scale));
+ display: flex;
+ flex-direction: column;
+ gap: calc(6px * var(--content-scale));
 }
 [data-theme="dark"] .output-brief-box {
-  background: #0d2820;
-  border-color: #1a4d3e;
+ background: #0d2820;
+ border-color: #1a4d3e;
 }
 .output-title {
-  font-size: calc(11px * var(--content-scale));
-  font-weight: 700;
-  color: var(--teal);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+ font-size: calc(11px * var(--content-scale));
+ font-weight: 700;
+ color: var(--teal);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
 }
 [data-theme="dark"] .output-title { color: #43b393; }
 
 .output-val-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: calc(13px * var(--content-scale));
-  font-weight: 700;
-  color: var(--text-primary);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: calc(13px * var(--content-scale));
+ font-weight: 700;
+ color: var(--text-primary);
 }
 
-/* inline values */
+/* css is weird sometimes */
 .panel-info #out-desc { font-size: calc(11px * var(--content-scale)) !important; }
 .panel-info .term-card-header > span:last-child {
-  font-size: calc(10px * var(--content-scale)) !important;
+ font-size: calc(10px * var(--content-scale)) !important;
 }
